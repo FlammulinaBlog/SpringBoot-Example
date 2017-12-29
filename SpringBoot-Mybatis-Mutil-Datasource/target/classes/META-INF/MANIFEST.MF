@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: springbootmybatis-mutil-datasource :: Spring Boo
+ t ￥ﾮﾞ￧ﾎﾰ Mybatis ￥ﾤﾚ￦ﾕﾰ￦ﾍﾮ￦ﾺﾐ￩ﾅﾍ￧ﾽﾮ
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: springboot
+Build-Jdk: 1.8.0_65
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootMy
+ batis-MutilDatasource/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

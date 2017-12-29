@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBoot-Mybatis :: ￦ﾕﾴ￥ﾐﾈ Mybatis Demo
+Implementation-Version: 0.0.1
+Built-By: Administrator
+Implementation-Vendor-Id: springboot
+Build-Jdk: 1.8.0_65
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootMy
+ batis/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
