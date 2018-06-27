@@ -6,9 +6,9 @@
     <!--数据库驱动-->
     <!--<properties resource="generator.properties"></properties>-->
 
-    <!--<classPathEntry    location="${jdbc.driverLocation}"/>-->
+    <classPathEntry    location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar"/>
 
-    <context id="mysql"    targetRuntime="MyBatis3">
+    <context id="mysql"    targetRuntime="MyBatis3Simple">
         <!--****************************************************************************************************-->
         <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
        一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖-->
@@ -21,13 +21,19 @@
         <!-- 格式化XML代码 -->
         <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
 
-
-
-        <commentGenerator >
-            <property name="suppressDate" value="true"/>
-            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="true"/>
+        <!-- 数据库表注释生成 -->
+        <commentGenerator type="org.spring.springboot.QnloftCommentGenerator">
+            <!-- 定义是否生成原生注释，我们这里自定义了，所以选择false -->
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="false"/>
         </commentGenerator>
+
+       <!-- <commentGenerator >
+            <property name="suppressDate" value="true"/>
+            &lt;!&ndash; 是否去除自动生成的注释 true：是 ： false:否 &ndash;&gt;
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>-->
+
 
 
         <!--数据库链接地址账号密码-->
@@ -39,6 +45,9 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
+
+
+
 
 
         <!--生成entity类存放位置-->
@@ -65,11 +74,16 @@
 
 
         <!--生成对应表及类名-->
-
-
         <table tableName="t_user_lib" domainObjectName="tUserLib" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"/>
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+             <!-- 对于特殊类型指定 -->
+             <columnOverride column="person_tag" jdbcType="VARCHAR" ></columnOverride>
+             <columnOverride column="music" jdbcType="VARCHAR" ></columnOverride>
+            <columnOverride column="interest" jdbcType="VARCHAR" ></columnOverride>
+            <columnOverride column="constellation" jdbcType="VARCHAR" ></columnOverride>
+        </table>
+
 
 
     </context>

@@ -56,6 +56,12 @@
             <version>4.12</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+
 
         <!--利用mybatis-generator自动生成代码-->
         <dependency>
@@ -77,6 +83,14 @@
                 <verbose>true</verbose>
                 <overwrite>true</overwrite>
             </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.spring.springboot</groupId>
+                        <artifactId>QnloftCommentGenerator</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+
         </plugin>
         </plugins>
     </build>
